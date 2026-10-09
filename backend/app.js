@@ -8,6 +8,8 @@ const teamRoutes = require("./routes/teamRoutes");
 const submissionRoutes = require("./routes/submissionRoutes");
 const winnerRoutes = require("./routes/winnerRoutes");
 const resultsRoutes = require("./routes/resultsRoutes");
+const verificationRoutes = require("./routes/verificationRoutes");
+const portfolioRoutes = require("./routes/portfolioRoutes");
 const app = express();
 
 app.use(cors());
@@ -20,6 +22,8 @@ app.use("/api/teams", teamRoutes);
 app.use("/api/submissions", submissionRoutes);
 app.use("/api/winners", winnerRoutes);
 app.use("/api/results", resultsRoutes);
+app.use("/api/verification", verificationRoutes);
+app.use("/api/portfolio", portfolioRoutes);
 app.get("/", (req, res) => {
     res.json({
         message: "DryftCode backend is running 🚀"
